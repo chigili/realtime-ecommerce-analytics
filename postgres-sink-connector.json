@@ -1,0 +1,20 @@
+{
+  "name": "session-stats-sink",
+  "config": {
+    "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+    "tasks.max": "1",
+    "topics": "session_stats_avro",
+    "connection.url": "jdbc:postgresql://${env:POSTGRES_HOST}:${env:POSTGRES_PORT}/${env:POSTGRES_DB}",
+    "connection.user": "${env:POSTGRES_USER}",
+    "connection.password": "${env:POSTGRES_PASSWORD}",
+    "auto.create": "true",
+    "auto.evolve": "true",
+    "insert.mode": "upsert",
+    "pk.mode": "record_key",
+    "pk.fields": "SESSION_ID",
+    "table.name.format": "sessions",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "io.confluent.connect.avro.AvroConverter",
+    "value.converter.schema.registry.url": "http://schema-registry:8081"
+  }
+}

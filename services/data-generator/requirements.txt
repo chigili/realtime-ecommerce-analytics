@@ -1,0 +1,26 @@
+# Core dependencies
+faker==37.11.0
+pydantic==2.12.3
+pydantic-settings==2.11.0
+python-dotenv==1.1.1
+
+# Kafka
+kafka-python==2.2.15
+confluent-kafka==2.12.1
+
+# Data & utilities
+numpy==2.3.4
+pandas==2.3.3
+python-dateutil==2.9.0.post0
+
+# PostgreSQL dependencies (for later)
+psycopg2-binary>=2.9.9
+
+# Logging & monitoring
+structlog==25.4.0
+prometheus-client==0.23.1
+
+# Testing
+pytest==8.4.2
+pytest-asyncio==1.2.0
+pytest-cov==7.0.0
