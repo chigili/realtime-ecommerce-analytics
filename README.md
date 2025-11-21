@@ -151,3 +151,6 @@ Ensure `KAFKA_BOOTSTRAP_SERVERS` in your `.env` matches the Kafka service config
 ### PostgreSQL connection errors
 Verify credentials in `.env` match those in `docker-compose.yml`
 
+
+📐 **[View Detailed Architecture](docs/architecture.md)**
+
